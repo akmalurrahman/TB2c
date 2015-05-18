@@ -5,67 +5,80 @@
  */
 package org.tb2c.module.netbeans;
 
-public class KebersihanRuangKelas extends LingkunganRuangKelas{
+
+public class KenyamananRuangKelas extends KebersihanRuangKelas {
 	
-		
 	
-	void InputKebersihanRuangKelas(){
-		
-		 	System.out.println("Masukkan kondisi sirkulasi udara dalam ruangan : (baik/tidak baik) ");
-		 	data.setSirkulasiUdara(scan.nextLine());
-	       
-		 	System.out.println("Masukkan nilai pencahayaan dalam ruangan : ");
-		 	data.setNilaiPencahayaan(scan.nextInt());
-	       
-		 	System.out.println("Masukkan nilai kelembapan dalam ruangan : ");
-		 	data.setKelembapan(scan.nextInt());
-	       
-		 	System.out.println("Masukkan suhu dalam ruangan : ");
-		 	data.setSuhu(scan.nextInt());
-	   }
-	   
-	 void AnalysisKebersihanRuangKelas(){
-		 String SirkulasiUdara = "Lancar";
+	
+	
+	void InputKenyamananRuangKelas(){
 		 
-		 if (SirkulasiUdara.equals(data.getSirkualasiUdara())){
-			 System.out.println("Sirkulasi udara di dalam ruangan sudah sesuai Standard");
+		 
+		 
+		 System.out.println("Kondisi kebisingan di dalam kelas : ");
+	     data.setKebisingan(scan.nextLine());
+	       
+	     System.out.println("Kondisi aroma di dalam/di luar kelas : ");
+	     data.setBau(scan.nextLine());
+	       
+	     System.out.println("Kondisi kaca jendela di dalam/di luar kelas  : ");
+	     data.setKebocoran(scan.nextLine());
+	       
+	     System.out.println("Kondisi Kerusakan di dalam kelas : ");
+	     data.setKerusakan(scan.nextLine());
+	     
+	     System.out.println("Kondisi keausan di dalam kelas : ");
+	     data.setKeausan(scan.nextLine());
+	 }
+	
+	 void AnalysisKenyamananRuangKelas(){
+		 String Kebisingan = "Tidak Bising";
+		 String Bau = "Tidak Bau";
+		 String Kebocoran = "Tidak Bocor";
+		 String Kerusakan = "Tidak Rusak";
+		 String Keausan = "Tidak Aus";
+		 
+		 if(Kebisingan.equals(data.getKebisingan())){
+			 System.out.println("Sudah Sesuai");
+	       }
+	       else{
+	           System.out.println("Belum Sesuai");
+	       }
+		 if(Bau.equals(data.getBau())){
+			 System.out.println("Sudah Sesuai ");
 		 }
 		 else{
-			 System.out.println("Sirkulasi udara di dalam ruangan belum sesuai Standard");
+			 System.out.println("Belum Sesuai ");
 		 }
-
-	       if( data.getNilaiPencahayaan()<=350 == data.getNilaiPencahayaan()>=250){
-	           System.out.println("Nilai pencahayaan ruangan sudah sesuai Standard ");
-	       }
-	       
-	        else{
-	           System.out.println(" Niali pencahayaan ruangan tidak sesuai Standard ");
-	       }
-	       
-	        if( data.getKelembapan()<=80 == data.getKelembapan()>=70){
-	           System.out.println("Kelembapan ruangan sudah sesuai Standard ");
-	       }
-	       
-	        else{
-	           System.out.println("Kelembapan ruangan belum sesuai Standard ");
-	       }
-	        
-	        if( data.getSuhu()<=35 == data.getSuhu()>=25){
-	           System.out.println("Kebersihan ruangan sudah sesuai Standard ");
-	       }
-	       
-	        else {
-	           System.out.println("Kebersihan ruangan belum sesuai Standard ");
-	       }
-	   }
-	 
-	 void OutputKebersihanRuangKelas(){
-		 System.out.println("== Kebersihan Ruang Kelas ==");
-		 System.out.println("Sirkulasi Udara : " + data.getSirkualasiUdara());
-		 System.out.println("Nilai Pencahayaan : " + data.getNilaiPencahayaan());
-		 System.out.println("Kelembapan : " + data.getKelembapan());
-		 System.out.println("Suhu : " + data.getSuhu());
+		 if(Kebocoran.equals(data.getKebocoran())){
+			 System.out.println("Sudah Sesuai");
+		 }
+		 else{
+			 System.out.println("Belum Sesuai");
+		 }
+		 if(Kerusakan.equals(data.getKerusakan())){
+			 System.out.println("Sudah Sesuai");
+		 }
+		 else{
+			 System.out.println("Belum Sesuai");
+		 }
+		 if(Keausan.equals(data.getKeausan())){
+			 System.out.println("Sudah Sesuai");
+		 }
+		 else{
+			 System.out.println("Belum Sesuai");
+		 }
 	 }
 	 
+	 void OutputKenyamanRuangKelas(){
+		 System.out.println("== Kenyamanan Ruang Kelas ==");
+		 System.out.println("Kebisingan : " + data.getKebisingan());
+		 System.out.println("Aroma : " + data.getBau());
+		 System.out.println("Kebocoran : " + data.getKebocoran());
+		 System.out.println("Kerusakan : " + data.getKerusakan());
+		 System.out.println("Keausan : " + data.getKeausan());
+	 }
 }
-
+	 
+	 
+	   

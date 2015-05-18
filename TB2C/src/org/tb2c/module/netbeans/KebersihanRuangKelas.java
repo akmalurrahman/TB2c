@@ -5,26 +5,68 @@
  */
 package org.tb2c.module.netbeans;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import org.openide.awt.ActionID;
-import org.openide.awt.ActionReference;
-import org.openide.awt.ActionRegistration;
-import org.openide.util.NbBundle.Messages;
+public class KebersihanRuangKelas extends LingkunganRuangKelas{
+	
+		
+	
+	void InputKebersihanRuangKelas(){
+		
+		 	System.out.println("Masukkan kondisi sirkulasi udara dalam ruangan : (baik/tidak baik) ");
+		 	data.setSirkulasiUdara(scan.nextLine());
+	       
+		 	System.out.println("Masukkan nilai pencahayaan dalam ruangan : ");
+		 	data.setNilaiPencahayaan(scan.nextInt());
+	       
+		 	System.out.println("Masukkan nilai kelembapan dalam ruangan : ");
+		 	data.setKelembapan(scan.nextInt());
+	       
+		 	System.out.println("Masukkan suhu dalam ruangan : ");
+		 	data.setSuhu(scan.nextInt());
+	   }
+	   
+	 void AnalysisKebersihanRuangKelas(){
+		 String SirkulasiUdara = "Lancar";
+		 
+		 if (SirkulasiUdara.equals(data.getSirkualasiUdara())){
+			 System.out.println("Sirkulasi udara di dalam ruangan sudah sesuai Standard");
+		 }
+		 else{
+			 System.out.println("Sirkulasi udara di dalam ruangan belum sesuai Standard");
+		 }
 
-@ActionID(
-        category = "tb2c",
-        id = "org.tb2c.module.netbeans.KebersihanRuangKelas"
-)
-@ActionRegistration(
-        displayName = "#CTL_KebersihanRuangKelas"
-)
-@ActionReference(path = "Menu/Tools", position = 0)
-@Messages("CTL_KebersihanRuangKelas=tb2c")
-public final class KebersihanRuangKelas implements ActionListener {
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        // TODO implement action body
-    }
+	       if( data.getNilaiPencahayaan()<=350 == data.getNilaiPencahayaan()>=250){
+	           System.out.println("Nilai pencahayaan ruangan sudah sesuai Standard ");
+	       }
+	       
+	        else{
+	           System.out.println(" Niali pencahayaan ruangan tidak sesuai Standard ");
+	       }
+	       
+	        if( data.getKelembapan()<=80 == data.getKelembapan()>=70){
+	           System.out.println("Kelembapan ruangan sudah sesuai Standard ");
+	       }
+	       
+	        else{
+	           System.out.println("Kelembapan ruangan belum sesuai Standard ");
+	       }
+	        
+	        if( data.getSuhu()<=35 == data.getSuhu()>=25){
+	           System.out.println("Kebersihan ruangan sudah sesuai Standard ");
+	       }
+	       
+	        else {
+	           System.out.println("Kebersihan ruangan belum sesuai Standard ");
+	       }
+	   }
+	 
+	 void OutputKebersihanRuangKelas(){
+		 System.out.println("== Kebersihan Ruang Kelas ==");
+		 System.out.println("Sirkulasi Udara : " + data.getSirkualasiUdara());
+		 System.out.println("Nilai Pencahayaan : " + data.getNilaiPencahayaan());
+		 System.out.println("Kelembapan : " + data.getKelembapan());
+		 System.out.println("Suhu : " + data.getSuhu());
+	 }
+	 
 }
+
+
