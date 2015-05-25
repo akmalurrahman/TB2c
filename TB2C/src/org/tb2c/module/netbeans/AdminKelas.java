@@ -5,7 +5,10 @@
  */
 package org.tb2c.module.netbeans;
 
+import java.util.Scanner;
+
 public class AdminKelas {
+    Scanner scan = new Scanner(System.in);
 
     private String NamaRuang;
     private String LokasiRuang;

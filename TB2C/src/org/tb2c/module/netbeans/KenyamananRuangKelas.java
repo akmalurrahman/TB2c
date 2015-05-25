@@ -15,20 +15,20 @@ public class KenyamananRuangKelas extends KebersihanRuangKelas {
 		 
 		 
 		 
-		 System.out.println("Kondisi kebisingan di dalam kelas : ");
-	     data.setKebisingan(scan.nextLine());
+             System.out.println("Kondisi kebisingan di dalam kelas : ");
+	     setKebisingan(scan.nextLine());
 	       
 	     System.out.println("Kondisi aroma di dalam/di luar kelas : ");
-	     data.setBau(scan.nextLine());
+	     setBau(scan.nextLine());
 	       
 	     System.out.println("Kondisi kaca jendela di dalam/di luar kelas  : ");
-	     data.setKebocoran(scan.nextLine());
+	     setKebocoran(scan.nextLine());
 	       
 	     System.out.println("Kondisi Kerusakan di dalam kelas : ");
-	     data.setKerusakan(scan.nextLine());
+	     setKerusakan(scan.nextLine());
 	     
 	     System.out.println("Kondisi keausan di dalam kelas : ");
-	     data.setKeausan(scan.nextLine());
+	     setKeausan(scan.nextLine());
 	 }
 	
 	 void AnalysisKenyamananRuangKelas(){
@@ -38,31 +38,31 @@ public class KenyamananRuangKelas extends KebersihanRuangKelas {
 		 String Kerusakan = "Tidak Rusak";
 		 String Keausan = "Tidak Aus";
 		 
-		 if(Kebisingan.equals(data.getKebisingan())){
+		 if(Kebisingan.equals(getKebisingan())){
 			 System.out.println("Sudah Sesuai");
 	       }
 	       else{
 	           System.out.println("Belum Sesuai");
 	       }
-		 if(Bau.equals(data.getBau())){
+		 if(Bau.equals(getBau())){
 			 System.out.println("Sudah Sesuai ");
 		 }
 		 else{
 			 System.out.println("Belum Sesuai ");
 		 }
-		 if(Kebocoran.equals(data.getKebocoran())){
+		 if(Kebocoran.equals(getKebocoran())){
 			 System.out.println("Sudah Sesuai");
 		 }
 		 else{
 			 System.out.println("Belum Sesuai");
 		 }
-		 if(Kerusakan.equals(data.getKerusakan())){
+		 if(Kerusakan.equals(getKerusakan())){
 			 System.out.println("Sudah Sesuai");
 		 }
 		 else{
 			 System.out.println("Belum Sesuai");
 		 }
-		 if(Keausan.equals(data.getKeausan())){
+		 if(Keausan.equals(getKeausan())){
 			 System.out.println("Sudah Sesuai");
 		 }
 		 else{
@@ -72,11 +72,11 @@ public class KenyamananRuangKelas extends KebersihanRuangKelas {
 	 
 	 void OutputKenyamanRuangKelas(){
 		 System.out.println("== Kenyamanan Ruang Kelas ==");
-		 System.out.println("Kebisingan : " + data.getKebisingan());
-		 System.out.println("Aroma : " + data.getBau());
-		 System.out.println("Kebocoran : " + data.getKebocoran());
-		 System.out.println("Kerusakan : " + data.getKerusakan());
-		 System.out.println("Keausan : " + data.getKeausan());
+		 System.out.println("Kebisingan : " + getKebisingan());
+		 System.out.println("Aroma : " + getBau());
+		 System.out.println("Kebocoran : " + getKebocoran());
+		 System.out.println("Kerusakan : " + getKerusakan());
+		 System.out.println("Keausan : " + getKeausan());
 	 }
 }
 	 

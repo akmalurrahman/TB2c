@@ -12,16 +12,16 @@ public class KeamananRuangKelas extends KenyamananRuangKelas{
 	void InputKeamananRuangKelas(){
 	   	
 	System.out.println("Kekokohan dalam kelas : ");
-        data.setKekokohan(scan.nextLine());
+        setKekokohan(scan.nextLine());
         
         System.out.println("Kelengkapan Kunci Pintu :  ");
-        data.setKunciPintu(scan.nextLine());
+        setKunciPintu(scan.nextLine());
         
         System.out.println("Kelengkapan Kunci Jendela :  ");
-        data.setKunciJendela(scan.nextLine());
+        setKunciJendela(scan.nextLine());
         
         System.out.println("Bahaya dalam kelas : ");
-        data.setBahaya(scan.nextLine());
+        setBahaya(scan.nextLine());
    }
 	
    void AnalysisKeamananRuangKelas(){
@@ -30,27 +30,27 @@ public class KeamananRuangKelas extends KenyamananRuangKelas{
 	   String KunciJendela = "Ada";
 	   String Bahaya = "Aman";
    
-   if(Kekokohan.equals(data.getKekokohan())){
+   if(Kekokohan.equals(getKekokohan())){
        System.out.println("Sudah Sesuai");
    }
    else{
        System.out.println("Belum Sesuai ");
    }
   
-   if(KunciPintu.equals(data.getKunciPintu())){
+   if(KunciPintu.equals(getKunciPintu())){
        System.out.println("Sudah Sesuai");
    }
    else{
        System.out.println("Belum Sesuai ");
    }
   
-   if(KunciJendela.equals(data.getKunciJendela())){
+   if(KunciJendela.equals(getKunciJendela())){
        System.out.println("Sudah Sesuai");
    }
    else{
        System.out.println("Tidak Sesuai ");
    }
-   if(Bahaya.equals(data.getBahaya())){
+   if(Bahaya.equals(getBahaya())){
 	  System.out.println("Sudah Sesuai");
    }
    else{
@@ -59,90 +59,13 @@ public class KeamananRuangKelas extends KenyamananRuangKelas{
 }
    
    void OutputKeamananRuangKelas(){
+       
   System.out.println("== Keamanan Ruang Kelas ==");
-  System.out.println("Kekokohan : " + data.getKekokohan());
-  System.out.println("Kunci Pintu : " + data.getKunciPintu());
-  System.out.println("Kunci Jendela : " + data.getKunciJendela());
-  System.out.println("Bahaya : " + data.getBahaya());
-	  }  
-   @Override
-   public void InputIdentitasRuangKelas(){
-		
-       
-       System.out.println("Masukan Nama Ruangan yang akan Anda gunakan : ");
-       data.setNamaRuang(scan.nextLine());
-      
-       System.out.println("Masukan Lokasi Ruangan yang akan Anda gunakan : ");
-       data.setLokasiRuang(scan.nextLine());
-       
-       System.out.println("Masukan Pengguna Program Studi/Fakultas : ");
-       data.setProgramStudi_Fakultas(scan.nextLine());
-	}
+  System.out.println("Kekokohan : " + getKekokohan());
+  System.out.println("Kunci Pintu : " + getKunciPintu());
+  System.out.println("Kunci Jendela : " + getKunciJendela());
+  System.out.println("Bahaya : " + getBahaya());
+    }  
 
-   
-        @Override
-    void InputKondisiRuangKelas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void InputJumlahKondisidanPosisiSarana() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void InputLingkunganKelas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void InputKebersihanRuangKelas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void InputKenyamananRuangKelas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void AnalysisKondisiRuangKelas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void AnalysisJumlahKondisidanPosisiSarana() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void AnalysisLingkunganRuangKelas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void AnalysisKebersihanRuangKelas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void AnalysisKenyamananRuangKelas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void OutputIdentitasRuangKelas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void OutputKondisiRuangKelas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void OutputJumlahKondisidanPosisiSarana() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void OutputLingkunganKelas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void OutputKebersihanRuangKelas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void OutputKenyamanRuangKelas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
 

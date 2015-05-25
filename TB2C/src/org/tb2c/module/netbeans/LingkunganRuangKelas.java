@@ -14,49 +14,49 @@ public class LingkunganRuangKelas extends JumlahKondisidanPosisiSarana{
 		 
 			
 	       System.out.println("Kondisi Lantai : ");
-	       data.setKondisiLantai(scan.nextLine());
+	       setKondisiLantai(scan.nextLine());
 	       
 	       System.out.println("Kondisi Dinding : ");
-	       data.setKondisiDinding(scan.nextLine());
+	       setKondisiDinding(scan.nextLine());
 	       
 	       System.out.println("Kondisi Atap : ");
-	       data.setKondisiAtap(scan.nextLine());
+	       setKondisiAtap(scan.nextLine());
 	       
 	       System.out.println("Kondisi Pintu : ");
-	       data.setKondisiPintu(scan.nextLine());
+	       setKondisiPintu(scan.nextLine());
 	       
 	       System.out.println("Kondisi Jendela : ");
-	       data.setKondisiJendela(scan.nextLine());
+	       setKondisiJendela(scan.nextLine());
 	   }
 	 
 	 void AnalysisLingkunganRuangKelas(){
 	       String KondisiRuangKelas = "Bersih";
 	       
-	       if(KondisiRuangKelas.equals(data.getKondisiLantai())){
+	       if(KondisiRuangKelas.equals(getKondisiLantai())){
 	    	   System.out.println("Sudah Sesuai Standard ");
 	       }
 	    	   else{
 		           System.out.println(" Belum Sesuai Standard ");
 		       } 
-	       if(KondisiRuangKelas.equals(data.getKondisiDinding())){
+	       if(KondisiRuangKelas.equals(getKondisiDinding())){
 	    	   System.out.println("Sudah Sesuai Standard ");
 	       }
 	    	   else{
 		           System.out.println(" Belum Sesuai Standard ");
 		       } 
-	       if(KondisiRuangKelas.equals(data.getKondisiAtap())){
+	       if(KondisiRuangKelas.equals(getKondisiAtap())){
 	    	   System.out.println("Sudah Sesuai Standard ");
 	       }
 	    	   else{
 		           System.out.println("Belum Sesuai Standard");
 		       } 
-	       if(KondisiRuangKelas.equals(data.getKondisiPintu())){
+	       if(KondisiRuangKelas.equals(getKondisiPintu())){
 	    	   System.out.println("Sudah Sesuai Standard");
 	       }
 	    	   else{
 		           System.out.println("Belum Sesuai Standard");
 		       } 
-	       if(KondisiRuangKelas.equals(data.getKondisiJendela())){
+	       if(KondisiRuangKelas.equals(getKondisiJendela())){
 	      
 	       System.out.println("Sudah Sesuai Standard");
 	       }
@@ -68,11 +68,11 @@ public class LingkunganRuangKelas extends JumlahKondisidanPosisiSarana{
 	 
 	 void OutputLingkunganKelas(){
 		 System.out.println("== Lingkungan Kelas ==");
-		 System.out.println("Kondisi Lantai : " + data.getKondisiLantai());
-		 System.out.println("Kondisi Dinding : " + data.getKondisiDinding());
-		 System.out.println("Kondisi Atap : " + data.getKondisiAtap());
-		 System.out.println("Kondisi Pintu : " + data.getKondisiPintu());
-		 System.out.println("Kondisi Jendela : " + data.getKondisiJendela());
+		 System.out.println("Kondisi Lantai : " + getKondisiLantai());
+		 System.out.println("Kondisi Dinding : " + getKondisiDinding());
+		 System.out.println("Kondisi Atap : " + getKondisiAtap());
+		 System.out.println("Kondisi Pintu : " + getKondisiPintu());
+		 System.out.println("Kondisi Jendela : " + getKondisiJendela());
 	 }
 }
 
